@@ -41,9 +41,9 @@ const testimonials = [
   },
 ];
 
-export const TestimonialsSection = () => {
+export const TestimonialsSection = ({ id }: { id?: string }) => {
   return (
-    <div className="py-16 lg:py-24">
+    <div className="py-16 lg:py-24" id={id}>
       <div className="container">
         <SectionHeader
           eyebrow="Happy Clients"

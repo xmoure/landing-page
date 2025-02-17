@@ -1,7 +1,7 @@
 'use client';
 import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
-import bookImage from "@/assets/images/book-cover.png";
+import teamImage from "@/assets/images/team.png";
 import Image from "next/image";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
 import HTMLIcon from "@/assets/icons/html5.svg";
@@ -45,20 +45,20 @@ const toolboxItems = [
 
 const hobbies = [
   {
-    title: "Painting",
-    emoji: "🎨",
+    title: "Flexible PTO",
+    emoji: "🏖️",
     left: "5%",
     top: "5%",
   },
   {
-    title: "Photography",
-    emoji: "📸",
+    title: "Company retreats",
+    emoji: "🌎",
     left: "50%",
     top: "5%",
   },
   {
-    title: "Diving",
-    emoji: "🤿",
+    title: "Fitness",
+    emoji: "🏋🏼‍♂️",
     left: "35%",
     top: "40%",
   },
@@ -69,20 +69,20 @@ const hobbies = [
     top: "35%",
   },
   {
-    title: "Music",
-    emoji: "🎵",
+    title: "Learning",
+    emoji: "📚",
     left: "70%",
     top: "45%",
   },
   {
-    title: "Fitness",
-    emoji: "🏋️‍♂️",
+    title: "Competitive salary",
+    emoji: "💵",
     left: "5%",
     top: "65%",
   },
   {
-    title: "Reading",
-    emoji: "📚",
+    title: "Pet friendly",
+    emoji: "🐶",
     left: "45%",
     top: "70%",
   },
@@ -94,25 +94,25 @@ export const AboutSection = ({ id }: { id?: string }) => {
     <div className="py-20 lg:py-28" id={id}>
       <div className="container">
         <SectionHeader
-          eyebrow="About Me"
-          title="A Glimpse Into My World"
-          description="Learn more about who I am, what I do, and what inspires me"
+          eyebrow="About Us"
+          title="A Glimpse Into Our World"
+          description="Learn more about us and what inspires us."
         />
         <div className="mt-20 flex flex-col gap-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
-                title="My Reads"
-                description="Explore the books that inspire me"
+                title="Our Team"
+                description="Meet our team"
               />
               <div className="w-40 mx-auto mt-2 md:mt-0">
-                <Image src={bookImage} alt="Book cover" />
+                <Image src={teamImage} alt="Book cover" />
               </div>
             </Card>
             <Card className="h-[320px] md:col-span-3 lg:col-span-2">
               <CardHeader
-                title="My Toolbox"
-                description="Explore the technologies and tools I use"
+                title="Our Toolbox"
+                description="Explore the technologies and tools we use"
                 className=""
               />
               <ToolboxItems items={toolboxItems} itemsWrapperClassName="animate-move-left [animation-duration:30s]" />
@@ -127,7 +127,7 @@ export const AboutSection = ({ id }: { id?: string }) => {
             <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
               <CardHeader
                 title="Beyond the Code"
-                description="Explore my hobbies beyond the digital realm"
+                description="Explore our perks"
                 className="px-6 py-6"
               />
               <div className="relative flex-1" ref={constraintRef}>

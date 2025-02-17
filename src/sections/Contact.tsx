@@ -1,5 +1,7 @@
+'use client';
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import { sendEmail } from "@/utils/sendEmail";
 
 export const ContactSection = ({ id }: { id?: string }) => {
   return (
@@ -17,12 +19,12 @@ export const ContactSection = ({ id }: { id?: string }) => {
               </h2>
               <p className="text-sm mt-2 md:text-base">
                 Ready to bring your next project to life? Let&apos;s connect and
-                discuss how can I help you achieve your goals.
+                discuss how we can help you achieve your goals.
               </p>
             </div>
             <div>
-              <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900">
-                <span className="font-semibold">Contact Me</span>
+              <button onClick={sendEmail} className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900">
+                <span className="font-semibold">Contact Us</span>
                 <ArrowUpRightIcon className="size-4" />
               </button>
             </div>

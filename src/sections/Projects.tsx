@@ -1,6 +1,6 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import darkImage from "@/assets/images/darkImage2.png";
+import lightImage from "@/assets/images/lightImage.png";
+import thirdProjectImage from "@/assets/images/thirdProject.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -9,31 +9,31 @@ import Card from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "CompanyWow",
+    year: "2023",
+    title: "Dark Landing Page",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "",
+    image: darkImage,
   },
   {
-    company: "Innovative Co",
+    company: "Company2",
     year: "2021",
-    title: "Light Saas Landing Page",
+    title: "Light Landing Page",
     results: [
       { title: "Boosted sales by 20%" },
       { title: "Expanded customer reach by 35%" },
       { title: "Increased brand awareness by 15%" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    link: "",
+    image: lightImage,
   },
   {
-    company: "Quantum Dynamics",
+    company: "Company B",
     year: "2023",
     title: "AI Startup Landing Page",
     results: [
@@ -41,8 +41,8 @@ const portfolioProjects = [
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "",
+    image: thirdProjectImage,
   },
 ];
 
@@ -63,7 +63,7 @@ export const ProjectsSection = ({ id }: { id?: string }) => {
             <Card
               key={project.title}
               className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
-              style={{top: `calc(64px + ${projectIndex * 40}px` }}
+              style={{ top: `calc(64px + ${projectIndex * 40}px` }}
             >
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
@@ -88,12 +88,12 @@ export const ProjectsSection = ({ id }: { id?: string }) => {
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
-                    <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                      <span>View Live Site</span>
-                      <ArrowUpRightIcon className="size-4" />
-                    </button>
-                  </a>
+                  {/* <a href={project.link}> */}
+                  <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+                    <span>View Live Site</span>
+                    <ArrowUpRightIcon className="size-4" />
+                  </button>
+                  {/*  </a> */}
                 </div>
                 <div className="relative">
                   <Image
